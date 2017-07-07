@@ -26,27 +26,27 @@
 @property(nonatomic) NSString* category;
 /* Unique ID of the device triggering the event [optional]
  */
-@property(nonatomic) NSString* deviceId;
+@property(nonatomic) NSString* device_id;
 /* A key/value list of properties for this event. Values can be numerical, strings or booleans, proper typing matters (quoted vs unquoted) [optional]
  */
-@property(nonatomic) NSObject* eventProperties;
+@property(nonatomic) NSObject* event_properties;
 /* Epoch timestamp <i>in milliseconds</i> of when event itself occurred 
  */
-@property(nonatomic) NSNumber* eventTimestamp;
+@property(nonatomic) NSNumber* event_timestamp;
 /* Specifies the canonical model name of the request. Ex: DataCollectorNewUserRequest -> newUser, NewEventRequest -> newEvent,e tc 
  */
-@property(nonatomic) NSString* requestType;
+@property(nonatomic) NSString* request_type;
 /* The outcome of the transaction. Can be anything from a code to a word to a boolean depending on your neeeds. Ex: success, 200, invalid, insufficient_funds, etc 
  */
 @property(nonatomic) NSString* result;
 /* Epoch timestamp <i>in milliseconds</i> of when event was sent to the API 
  */
-@property(nonatomic) NSNumber* sendTimestamp;
+@property(nonatomic) NSNumber* send_timestamp;
 /* Unique transaction ID [optional]
  */
-@property(nonatomic) NSString* transactionId;
+@property(nonatomic) NSString* transaction_id;
 /* Unique ID of the user triggering the event [optional]
  */
-@property(nonatomic) NSString* userId;
+@property(nonatomic) NSString* user_id;
 
 @end
