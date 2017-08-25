@@ -11,6 +11,23 @@
   return self;
 }
 
+/**
+ * Maps "discriminator" value to the sub-class name, so that inheritance is supported.
+ */
+- (id)initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
+    NSString * discriminatedClassName = [dict valueForKey:@"request_type"];
+    if(discriminatedClassName == nil ){
+         return [super initWithDictionary:dict error:err];
+    }
+    Class class = NSClassFromString([@"DCC" stringByAppendingString:discriminatedClassName]);
+    if(!class) {
+        class = NSClassFromString([@"DCC" stringByAppendingString:[discriminatedClassName capitalizedString]]);
+    }
+    if([self class ] == class) {
+        return [super initWithDictionary:dict error:err];
+    }
+    return [[class alloc] initWithDictionary:dict error: err];
+}
 
 /**
  * Maps json key to property name.

@@ -14,33 +14,17 @@
 */
 
 
+#import "DCCDataCollectorBaseRequest.h"
+@protocol DCCDataCollectorBaseRequest;
+@class DCCDataCollectorBaseRequest;
 
 
 
 @protocol DCCDataCollectorNewDeviceRequest
 @end
 
-@interface DCCDataCollectorNewDeviceRequest : DCCObject
+@interface DCCDataCollectorNewDeviceRequest : DCCDataCollectorBaseRequest
 
-/* Unique ID of the new device 
- */
-@property(nonatomic) NSString* deviceId;
-/* A key/value list of properties for this event. Values can be numerical, strings or booleans, proper typing matters (quoted vs unquoted) [optional]
- */
-@property(nonatomic) NSObject* eventProperties;
-/* Epoch timestamp <i>in milliseconds</i> of when event itself occurred 
- */
-@property(nonatomic) NSNumber* eventTimestamp;
-/* Specifies the canonical model name of the request. Ex: DataCollectorNewUserRequest -> newUser, NewEventRequest -> newEvent,e tc 
- */
-@property(nonatomic) NSString* requestType;
-/* Epoch timestamp <i>in milliseconds</i> of when event was sent to the API 
- */
-@property(nonatomic) NSNumber* sendTimestamp;
-/* Unique ID of the user triggering the event [optional]
- */
-@property(nonatomic) NSString* userId;
 
-+ (NSDictionary *)modalDictionary;
 
 @end

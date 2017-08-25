@@ -21,8 +21,11 @@
 }
 
 + (NSDictionary *)modalDictionary {
-
-  return @{ @"deviceId": @"device_id", @"eventProperties": @"event_properties", @"eventTimestamp": @"event_timestamp", @"requestType": @"request_type", @"result": @"result", @"sendTimestamp": @"send_timestamp", @"transactionId": @"transaction_id", @"userId": @"user_id", @"category": @"category" };
+  NSMutableDictionary * mutableDictionary = [[NSMutableDictionary alloc] initWithDictionary:[super modalDictionary] copyItems:NO];
+    
+  [mutableDictionary addEntriesFromDictionary:@{ @"result": @"result", @"transactionId": @"transaction_id", @"category": @"category" }];
+    
+  return mutableDictionary;
 }
 
 /**
@@ -32,9 +35,8 @@
  */
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
 
-  NSArray *optionalProperties = @[@"deviceId", @"eventProperties", @"transactionId", @"userId", ];
-
-  return [optionalProperties containsObject:propertyName];
+  NSArray *optionalProperties = @[@"transactionId", ];
+  return [super propertyIsOptional:propertyName] | [optionalProperties containsObject:propertyName];
 }
 
 @end

@@ -14,42 +14,26 @@
 */
 
 
+#import "DCCDataCollectorBaseRequest.h"
+@protocol DCCDataCollectorBaseRequest;
+@class DCCDataCollectorBaseRequest;
 
 
 
 @protocol DCCDataCollectorEndTransactionRequest
 @end
 
-@interface DCCDataCollectorEndTransactionRequest : DCCObject
+@interface DCCDataCollectorEndTransactionRequest : DCCDataCollectorBaseRequest
 
-/* Unique ID of the device triggering the event [optional]
- */
-@property(nonatomic) NSString* deviceId;
-/* A key/value list of properties for this event. Values can be numerical, strings or booleans, proper typing matters (quoted vs unquoted) [optional]
- */
-@property(nonatomic) NSObject* eventProperties;
-/* Epoch timestamp <i>in milliseconds</i> of when event itself occurred 
- */
-@property(nonatomic) NSNumber* eventTimestamp;
-/* Specifies the canonical model name of the request. Ex: DataCollectorNewUserRequest -> newUser, NewEventRequest -> newEvent,e tc 
- */
-@property(nonatomic) NSString* requestType;
 /* The outcome of the transaction. Can be anything from a code to a word to a boolean depending on your neeeds. Ex: success, 200, invalid, insufficient_funds, etc 
  */
 @property(nonatomic) NSString* result;
-/* Epoch timestamp <i>in milliseconds</i> of when event was sent to the API 
- */
-@property(nonatomic) NSNumber* sendTimestamp;
 /* Unique transaction ID [optional]
  */
 @property(nonatomic) NSString* transactionId;
-/* Unique ID of the user triggering the event [optional]
- */
-@property(nonatomic) NSString* userId;
 /* The name/type of the transaction 
  */
 @property(nonatomic) NSString* category;
 
-+ (NSDictionary *)modalDictionary;
 
 @end
