@@ -33,7 +33,7 @@ extern NSInteger kDCCEventsApiMissingParamErrorCode;
 ///  code:400 message:"Invalid data provided in request",
 ///  code:401 message:"Customer not authorized for this service"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) createEventWithCustomerId: (NSString*) customerId
     request: (DCCNewEventRequest*) request
     completionHandler: (void (^)(NSError* error)) handler;

@@ -36,7 +36,7 @@ extern NSInteger kDCCTransactionsApiMissingParamErrorCode;
 ///  code:400 message:"Invalid data provided in request",
 ///  code:401 message:"Customer not authorized for this service"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) beginTransactionWithCustomerId: (NSString*) customerId
     request: (DCCDataCollectorBeginTransactionRequest*) request
     completionHandler: (void (^)(NSError* error)) handler;
@@ -51,7 +51,7 @@ extern NSInteger kDCCTransactionsApiMissingParamErrorCode;
 /// 
 ///  code:202 message:"Successfully recorded"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) endTransactionWithId: (NSString*) _id
     customerId: (NSString*) customerId
     request: (DCCDataCollectorEndTransactionRequest*) request
@@ -68,7 +68,7 @@ extern NSInteger kDCCTransactionsApiMissingParamErrorCode;
 ///  code:400 message:"Invalid data provided in request",
 ///  code:401 message:"Customer not authorized for this service"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) updateCollectionWithCustomerId: (NSString*) customerId
     request: (DCCDataCollectorUpdateCollectionRequest*) request
     completionHandler: (void (^)(NSError* error)) handler;
@@ -83,7 +83,7 @@ extern NSInteger kDCCTransactionsApiMissingParamErrorCode;
 /// 
 ///  code:202 message:"Successfully recorded"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) updateTransactionWithId: (NSString*) _id
     customerId: (NSString*) customerId
     request: (DCCDataCollectorUpdateTransactionRequest*) request

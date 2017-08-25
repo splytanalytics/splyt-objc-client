@@ -15,6 +15,9 @@
 
 
 #import "DCCDataCollectorBaseRequest.h"
+@protocol DCCDataCollectorBaseRequest;
+@class DCCDataCollectorBaseRequest;
+
 
 
 @protocol DCCDataCollectorBatchRequest

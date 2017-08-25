@@ -82,7 +82,7 @@ NSInteger kDCCDevicesApiMissingParamErrorCode = 234513;
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
     if (checked != nil) {
-        queryParams[@"checked"] = checked;
+        queryParams[@"checked"] = [checked isEqual:@(YES)] ? @"true" : @"false";
     }
     if (customerId != nil) {
         queryParams[@"customerId"] = customerId;

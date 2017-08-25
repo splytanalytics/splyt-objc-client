@@ -35,7 +35,7 @@ extern NSInteger kDCCDevicesApiMissingParamErrorCode;
 ///  code:400 message:"Invalid data provided in request",
 ///  code:401 message:"Customer not authorized for this service"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) newDeviceWithCustomerId: (NSString*) customerId
     request: (DCCDataCollectorNewDeviceRequest*) request
     checked: (NSNumber*) checked
@@ -51,7 +51,7 @@ extern NSInteger kDCCDevicesApiMissingParamErrorCode;
 /// 
 ///  code:202 message:"Successfully recorded"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) updateDeviceStateWithId: (NSString*) _id
     customerId: (NSString*) customerId
     request: (DCCDataCollectorUpdateDeviceStateRequest*) request

@@ -33,7 +33,7 @@ extern NSInteger kDCCMobileApplicationTrackingApiMissingParamErrorCode;
 ///  code:400 message:"Invalid data provided in request",
 ///  code:401 message:"Customer not authorized for this service"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) submitTuneRequestWithCustomerId: (NSString*) customerId
     request: (DCCDataCollectorTuneRequest*) request
     completionHandler: (void (^)(NSError* error)) handler;

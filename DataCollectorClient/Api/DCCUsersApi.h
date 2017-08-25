@@ -35,7 +35,7 @@ extern NSInteger kDCCUsersApiMissingParamErrorCode;
 ///  code:400 message:"Invalid data provided in request",
 ///  code:401 message:"Customer not authorized for this service"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) newUserWithCustomerId: (NSString*) customerId
     request: (DCCDataCollectorNewUserRequest*) request
     checked: (NSNumber*) checked
@@ -51,7 +51,7 @@ extern NSInteger kDCCUsersApiMissingParamErrorCode;
 /// 
 ///  code:202 message:"Successfully recorded"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) updateUserStateWithId: (NSString*) _id
     customerId: (NSString*) customerId
     request: (DCCDataCollectorUpdateUserStateRequest*) request

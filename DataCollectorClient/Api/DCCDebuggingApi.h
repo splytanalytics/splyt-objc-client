@@ -29,7 +29,7 @@ extern NSInteger kDCCDebuggingApiMissingParamErrorCode;
 /// 
 ///  code:204 message:"Successfully disabled debugging"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) disableDebuggerWithCustomerId: (NSString*) customerId
     completionHandler: (void (^)(NSError* error)) handler;
 
@@ -43,7 +43,7 @@ extern NSInteger kDCCDebuggingApiMissingParamErrorCode;
 ///  code:400 message:"Invalid data provided in request",
 ///  code:401 message:"Customer not authorized for this service"
 ///
-/// @return 
+/// @return void
 -(NSURLSessionTask*) enableDebuggerWithCustomerId: (NSString*) customerId
     completionHandler: (void (^)(NSError* error)) handler;
 
